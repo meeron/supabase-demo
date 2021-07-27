@@ -1,11 +1,21 @@
 import React from "react";
-import styles from "./App.module.scss";
+import { AppBar, Toolbar, Typography, Container } from "@material-ui/core";
+import useStyles from "./App.styles";
 
 function App() {
+  const styles = useStyles();
+
   return (
-    <div className={styles.app}>
-      <p>May the Force be with You</p>
-    </div>
+    <>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">Supabase demo app</Typography>
+        </Toolbar>
+      </AppBar>
+      <Container>
+        <h2 className={styles.header}>Latest news</h2>
+      </Container>
+    </>
   );
 }
 
